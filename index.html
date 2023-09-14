@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave</title>
+        <style>
+            html {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+            }
+        
+            #content {
+                margin: 0 auto;
+                max-width: 600px;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+        
+            h1 {
+                font-size: 36px;
+                margin-top: 0;
+            }
+        
+            p {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+        
+            input[type="text"] {
+                font-size: 18px;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+        
+            #btnWrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+        
+            button {
+                font-size: 18px;
+                padding: 10px;
+                width: 48%;
+                box-sizing: border-box;
+            }
+        
+            #feedbackWrapper {
+                margin-top: 20px;
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+            }
+        
+            #feedback {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        
+            .correct {
+                color: green;
+            }
+        
+            .incorrect {
+                color: red;
+            }
+        
+            .game-over {
+                color: red;
+                font-weight: bold;
+            }
+        
+            #guesses {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+        
+            #guessCount {
+                font-size: 18px;
+                margin-top: 0;
+            }
+        </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="inner-content">
+            <h1>Oppgave: Dynamisk HTML</h1>
+            <p>Jeg har valgt ett tall mellom 1 og 100, gjett tallet mitt</p>
+            <div id="userInputWrapper">
+                <input type="text">
+                <div id="btnWrapper">
+                    <button id="guessButton">Guess</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+            </div>
+            <div id="feedbackWrapper">
+                <p id="feedback"></p>
+                <p id="guesses"></p>
+                <p id="guessCount">Guesses: 0</p>
+            </div>
+        </div>
+    </div>
+    <script src="spill.js"></script>
+</body>
+
+</html>
